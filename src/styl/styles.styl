@@ -1,0 +1,112 @@
+@import 'partials/_variables'
+@import 'partials/_functions'
+
+*,
+*:before, *:after 
+  box-sizing: border-box;
+
+span:after 
+  content: "";
+  clear: none;
+  display: inline-block;
+  box-sizing: border-box;
+
+.clearfix 
+  display: block;
+  font-size: 0;
+  color: transparent;
+  width: 0;
+  height: 0;
+  clear: both;
+
+html 
+    font-size: 62.5%;
+
+body 
+    box-sizing: border-box;
+    font-family: $roboto;
+    color #fff
+    font-size: 1.6rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+h1
+  font-size: $fs-h1;
+  font-weight: $light;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+  span
+    color: $color-cta;
+    font-weight: $bold;
+h2
+  font-size: $fs-h2;
+  font-weight: $bold;
+  line-height: 150%;
+h3
+  font-size: $fs-h3;
+  font-weight: bold;
+  line-height: 150%;
+a 
+    text-decoration: none;
+    color: #fff;
+
+p
+  line-height: 150%;
+
+.Container
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $color-primary;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+
+  &__content
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+.Circle
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 32px 0;
+  &__image
+    width: 100%;
+    height: 100%;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    background: url(../img/circle-image.PNG) no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 4;
+    position: absolute;
+  &__blob
+    position: absolute;
+    width: 210px;
+    left: -20%;
+    top: -20%;
+.Links
+  margin-top: 32px;
+  width: 100%;
+  a
+    display: block;
+    width: 100%
+    padding: 16px;
+    margin-bottom: 24px;
+    border-radius: 5px;
+    border: 3px solid $color-cta;
+    background: transparent;
+    text-align: center;
+    font-weight: $bold;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+    transition: 0.3s ease;
+    &.filled
+      background: $color-cta;
+    &:hover
+      background: $color-hover;
+      border-color: $color-hover;
+      transition: 0.3s ease;
+    
